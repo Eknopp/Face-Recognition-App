@@ -93,7 +93,6 @@ class App extends Component {
         })
         .then(response => response.json())
           .then(result => {
-            console.log(result)
             if(result.outputs){
               fetch('https://face-recognition-brain-server.onrender.com/image', {
                 method: 'put',
