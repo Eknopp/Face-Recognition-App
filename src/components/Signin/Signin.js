@@ -30,6 +30,7 @@ class Signin extends React.Component{
        .then(user =>{
           if(user.id){
             this.props.loadUser(user)
+            //Add user stored in device here
             this.props.onRouteChange('home');
           }
        })

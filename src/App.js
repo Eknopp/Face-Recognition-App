@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ParticlesBg from 'particles-bg'
+// import ParticlesBg from 'particles-bg'
 import Navigation from './components/Navigation/Navigation';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
-import Logo from './components/Logo/Logo';
+// import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm';
 import Rank from './components/Rank/Rank';
 import Signin from './components/Signin/Signin';
@@ -128,12 +128,12 @@ class App extends Component {
   render(){
         const { isSignedIn, imageUrl, route, box } = this.state;
           return (
-          <div className="App">
-            <ParticlesBg num={30} type="cobweb" bg={true} />
+          <div className="App ">
+            {/* <ParticlesBg num={30} type="cobweb" bg={true} /> */}
             <Navigation isSignedIn={isSignedIn} onRouteChange={this.onRouteChange}/>
             { route === 'home'
-            ? <div>
-              <Logo />
+            ? <div className='flex flex-column mt3'>
+              {/* <Logo /> */}
               <Rank userName ={this.state.user.name} userEntries = {this.state.user.entries}/>
               <ImageLinkForm 
               onInputChange={this.onInputChange} 
@@ -152,3 +152,5 @@ class App extends Component {
 }
 
 export default App;
+
+
